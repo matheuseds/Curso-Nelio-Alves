@@ -4,6 +4,11 @@
     {
         static void Main(string[] args)
         {
+            ExercEntradaDados(); 
+        }
+
+        public static void ExercEntradaDados()
+        {
             try
             {
                 Console.WriteLine("Entre com seu nome: ");
@@ -30,7 +35,9 @@
             catch (Exception)
             {
                 throw;
-            }     
+            }
         }
+
+
     }
 }
