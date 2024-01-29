@@ -1,4 +1,6 @@
-﻿namespace Course
+﻿using System.Globalization;
+
+namespace Course
 {
     class Program
     {
@@ -6,6 +8,7 @@
         {
             ExercEntradaDados();
             ExercFuncoesMatematicas();
+            ExercTerreno();
         }
 
         public static void ExercEntradaDados()
@@ -66,6 +69,24 @@
             {
                 throw;
             }
+        }
+
+        public static void ExercTerreno()
+        {
+            Console.WriteLine("Digite a largura do terreno: ");
+            double largura = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a comprimento do terreno: ");
+            double comprimento = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o valor do metro quadrado");
+            double vlrMetroQuadrado = double.Parse(Console.ReadLine());
+
+            double area = largura * comprimento;
+            double preco = area * vlrMetroQuadrado;
+
+            Console.WriteLine($"Área = {area.ToString("F2", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"Preço = {preco.ToString("F2", CultureInfo.InvariantCulture)}");
         }
     }
 }
