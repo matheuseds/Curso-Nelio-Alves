@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 
 namespace Course
 {
@@ -9,6 +10,8 @@ namespace Course
             ExercEntradaDados();
             ExercFuncoesMatematicas();
             ExercTerreno();
+            Exerc1001UriOnline();
+            Exerc1002UriOnline();
         }
 
         public static void ExercEntradaDados()
@@ -87,6 +90,30 @@ namespace Course
 
             Console.WriteLine($"Área = {area.ToString("F2", CultureInfo.InvariantCulture)}");
             Console.WriteLine($"Preço = {preco.ToString("F2", CultureInfo.InvariantCulture)}");
+        }
+
+        public static void Exerc1001UriOnline()
+        {
+            int A, B, X;
+
+            A = int.Parse(Console.ReadLine());
+
+            B = int.Parse(Console.ReadLine());
+
+            X = A + B;
+
+            Console.WriteLine($"X = {X}");
+        }
+
+        public static void Exerc1002UriOnline()
+        {
+            double A;
+            double n = 3.14159;
+            double raio = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+
+            A =  n * Math.Pow(raio, 2);
+
+            Console.WriteLine($"A={A.ToString("F4", CultureInfo.InvariantCulture)}");
         }
     }
 }
