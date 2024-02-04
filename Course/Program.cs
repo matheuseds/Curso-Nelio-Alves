@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Threading;
 
 namespace Course
 {
@@ -7,15 +8,16 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            //ExercEntradaDados();
-            //ExercFuncoesMatematicas();
-            //ExercTerreno();
-            //Exerc1001UriOnline();
-            //Exerc1002UriOnline();
-            //Exerc1003UriOnline();
-            //Exerc1004UriOnline();
-            //Exerc1005UriOnline();
+            ExercEntradaDados();
+            ExercFuncoesMatematicas();
+            ExercTerreno();
+            Exerc1001UriOnline();
+            Exerc1002UriOnline();
+            Exerc1003UriOnline();
+            Exerc1004UriOnline();
+            Exerc1005UriOnline();
             Exerc1008UriOnline();
+            Exerc10010UriOnline();
         }
 
         public static void ExercEntradaDados()
@@ -115,7 +117,7 @@ namespace Course
             double n = 3.14159;
             double raio = double.Parse(Console.ReadLine());
 
-            A =  n * Math.Pow(raio, 2);
+            A = n * Math.Pow(raio, 2);
 
             Console.WriteLine($"A={A.ToString("F4", CultureInfo.InvariantCulture)}");
         }
@@ -163,7 +165,24 @@ namespace Course
             double result = (valorHora * qtdHoras);
 
             Console.WriteLine($"NUMBER = {numFunc}");
-            Console.WriteLine($"SALARY = U$ {result.ToString("F2",CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"SALARY = U$ {result.ToString("F2", CultureInfo.InvariantCulture)}");
+        }
+
+        public static void Exerc10010UriOnline()
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
+            string[] codPeca1 = Console.ReadLine().Split(' ');
+            string[] codPeca2 = Console.ReadLine().Split(' ');
+
+            double qtdePeca1 = double.Parse(codPeca1[1]);
+            double qtdePeca2 = double.Parse(codPeca2[1]);
+            double valorPeca1 = double.Parse(codPeca1[2]);
+            double valorPeca2 = double.Parse(codPeca2[2]);
+
+            double result = (qtdePeca1 * valorPeca1) + (qtdePeca2 * valorPeca2);
+
+            Console.WriteLine($"VALOR A PAGAR: R$ {result.ToString("F2", CultureInfo.InvariantCulture)}");
         }
     }
 }
