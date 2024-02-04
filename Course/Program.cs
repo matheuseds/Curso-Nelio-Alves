@@ -7,11 +7,15 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            ExercEntradaDados();
-            ExercFuncoesMatematicas();
-            ExercTerreno();
-            Exerc1001UriOnline();
-            Exerc1002UriOnline();
+            //ExercEntradaDados();
+            //ExercFuncoesMatematicas();
+            //ExercTerreno();
+            //Exerc1001UriOnline();
+            //Exerc1002UriOnline();
+            //Exerc1003UriOnline();
+            //Exerc1004UriOnline();
+            //Exerc1005UriOnline();
+            Exerc1008UriOnline();
         }
 
         public static void ExercEntradaDados()
@@ -109,11 +113,57 @@ namespace Course
         {
             double A;
             double n = 3.14159;
-            double raio = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+            double raio = double.Parse(Console.ReadLine());
 
             A =  n * Math.Pow(raio, 2);
 
             Console.WriteLine($"A={A.ToString("F4", CultureInfo.InvariantCulture)}");
+        }
+
+        public static void Exerc1003UriOnline()
+        {
+            int A = int.Parse(Console.ReadLine());
+
+            int B = int.Parse(Console.ReadLine());
+
+            int result = A + B;
+
+            Console.WriteLine($"SOMA = {result}");
+        }
+
+        public static void Exerc1004UriOnline()
+        {
+            int A = int.Parse(Console.ReadLine());
+
+            int B = int.Parse(Console.ReadLine());
+
+            int result = A * B;
+
+            Console.WriteLine($"PROD = {result}");
+        }
+
+        public static void Exerc1005UriOnline()
+        {
+            int A = int.Parse(Console.ReadLine());
+            int B = int.Parse(Console.ReadLine());
+            int C = int.Parse(Console.ReadLine());
+            int D = int.Parse(Console.ReadLine());
+
+            int result = (A * B) - (C * D);
+
+            Console.WriteLine($"DIFERENCA = {result}");
+        }
+
+        public static void Exerc1008UriOnline()
+        {
+            int numFunc = int.Parse(Console.ReadLine());
+            int qtdHoras = int.Parse(Console.ReadLine());
+            double valorHora = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double result = (valorHora * qtdHoras);
+
+            Console.WriteLine($"NUMBER = {numFunc}");
+            Console.WriteLine($"SALARY = U$ {result.ToString("F2",CultureInfo.InvariantCulture)}");
         }
     }
 }
