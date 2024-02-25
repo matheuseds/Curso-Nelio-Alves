@@ -8,16 +8,17 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            ExercEntradaDados();
-            ExercFuncoesMatematicas();
-            ExercTerreno();
-            Exerc1001UriOnline();
-            Exerc1002UriOnline();
-            Exerc1003UriOnline();
-            Exerc1004UriOnline();
-            Exerc1005UriOnline();
-            Exerc1008UriOnline();
-            Exerc10010UriOnline();
+            //ExercEntradaDados();
+            //ExercFuncoesMatematicas();
+            //ExercTerreno();
+            //Exerc1001UriOnline();
+            //Exerc1002UriOnline();
+            //Exerc1003UriOnline();
+            //Exerc1004UriOnline();
+            //Exerc1005UriOnline();
+            //Exerc1008UriOnline();
+            Exerc1009UriOnline();
+           // Exerc10010UriOnline();
         }
 
         public static void ExercEntradaDados()
@@ -166,6 +167,18 @@ namespace Course
 
             Console.WriteLine($"NUMBER = {numFunc}");
             Console.WriteLine($"SALARY = U$ {result.ToString("F2", CultureInfo.InvariantCulture)}");
+        }
+
+        public static void Exerc1009UriOnline()
+        {
+            string nome = Console.ReadLine();
+            double valorSalario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double totalVendas = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double result = valorSalario + (totalVendas * 0.15);
+
+            Console.WriteLine($"TOTAL = R$ {result.ToString("F2",CultureInfo.InvariantCulture)}");
+ 
         }
 
         public static void Exerc10010UriOnline()
