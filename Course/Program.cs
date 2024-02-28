@@ -17,8 +17,10 @@ namespace Course
             //Exerc1004UriOnline();
             //Exerc1005UriOnline();
             //Exerc1008UriOnline();
-            Exerc1009UriOnline();
-           // Exerc10010UriOnline();
+            //Exerc1009UriOnline();
+            //Exerc10010UriOnline();
+            //Exerc10011UriOnline();
+            //Exerc10012UriOnline();
         }
 
         public static void ExercEntradaDados()
@@ -177,8 +179,8 @@ namespace Course
 
             double result = valorSalario + (totalVendas * 0.15);
 
-            Console.WriteLine($"TOTAL = R$ {result.ToString("F2",CultureInfo.InvariantCulture)}");
- 
+            Console.WriteLine($"TOTAL = R$ {result.ToString("F2", CultureInfo.InvariantCulture)}");
+
         }
 
         public static void Exerc10010UriOnline()
@@ -196,6 +198,37 @@ namespace Course
             double result = (qtdePeca1 * valorPeca1) + (qtdePeca2 * valorPeca2);
 
             Console.WriteLine($"VALOR A PAGAR: R$ {result.ToString("F2", CultureInfo.InvariantCulture)}");
+        }
+
+        public static void Exerc10011UriOnline()
+        {
+            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double result = (4.0 / 3) * 3.14159 * Math.Pow(raio, 3);
+
+            Console.WriteLine($"VOLUME = {result.ToString("F3", CultureInfo.InvariantCulture)}");
+        }
+
+        public static void Exerc10012UriOnline()
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
+            string[] values = Console.ReadLine().Split(" ");
+
+            double trianguloRet = (double.Parse(values[0]) * double.Parse(values[2])) / 2;
+            Console.WriteLine($"TRIANGULO: {trianguloRet.ToString("F3", CultureInfo.InvariantCulture)}");
+
+            double areaCirculo = 3.14159 * Math.Pow(double.Parse(values[2]), 2);
+            Console.WriteLine($"CIRCULO: {areaCirculo.ToString("F3", CultureInfo.InvariantCulture)}");
+
+            double areaTrapezio = ((double.Parse(values[0]) + double.Parse(values[1])) * double.Parse(values[2])) / 2;
+            Console.WriteLine($"TRAPEZIO: {areaTrapezio.ToString("F3", CultureInfo.InvariantCulture)}");
+
+            double areaQuadrado = double.Parse(values[1]) * double.Parse(values[1]);
+            Console.WriteLine($"QUADRADO: {areaQuadrado.ToString("F3", CultureInfo.InvariantCulture)}");
+
+            double areaRetangulo = double.Parse(values[0]) * double.Parse(values[1]);
+            Console.WriteLine($"RETANGULO: {areaRetangulo.ToString("F3", CultureInfo.InvariantCulture)}");
         }
     }
 }
