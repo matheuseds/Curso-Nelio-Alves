@@ -8,19 +8,21 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            //ExercEntradaDados();
-            //ExercFuncoesMatematicas();
-            //ExercTerreno();
-            //Exerc1001UriOnline();
-            //Exerc1002UriOnline();
-            //Exerc1003UriOnline();
-            //Exerc1004UriOnline();
-            //Exerc1005UriOnline();
-            //Exerc1008UriOnline();
-            //Exerc1009UriOnline();
-            //Exerc10010UriOnline();
-            //Exerc10011UriOnline();
-            //Exerc10012UriOnline();
+            ExercEntradaDados();
+            ExercFuncoesMatematicas();
+            ExercTerreno();
+            Exerc1001UriOnline();
+            Exerc1002UriOnline();
+            Exerc1003UriOnline();
+            Exerc1004UriOnline();
+            Exerc1005UriOnline();
+            Exerc1008UriOnline();
+            Exerc1009UriOnline();
+            Exerc10010UriOnline();
+            Exerc10011UriOnline();
+            Exerc10012UriOnline();
+            Exerc10013UriOnline();
+            Exerc10015UriOnline();
         }
 
         public static void ExercEntradaDados()
@@ -229,6 +231,35 @@ namespace Course
 
             double areaRetangulo = double.Parse(values[0]) * double.Parse(values[1]);
             Console.WriteLine($"RETANGULO: {areaRetangulo.ToString("F3", CultureInfo.InvariantCulture)}");
+        }
+
+        public static void Exerc10013UriOnline()
+        {
+            string[] vet = Console.ReadLine().Split(' ');
+
+            int maiorValor = 0;
+
+            for (int i = 0; i < vet.Length; i++)
+            {
+                if (int.Parse(vet[i]) > maiorValor)
+                {
+                    maiorValor = int.Parse(vet[i]);
+                }
+            }
+
+            Console.WriteLine($"{maiorValor.ToString()} eh o maior");
+        }
+
+        public static void Exerc10015UriOnline()
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
+            string[] vet1 = Console.ReadLine().Split(' ');
+            string[] vet2 = Console.ReadLine().Split(' ');
+
+            double distancia = Math.Sqrt(Math.Pow(double.Parse(vet2[0]) - double.Parse(vet1[0]), 2) + Math.Pow(double.Parse(vet2[1]) - double.Parse(vet1[1]), 2));
+
+            Console.WriteLine(distancia.ToString("F4", CultureInfo.InvariantCulture));
         }
     }
 }
